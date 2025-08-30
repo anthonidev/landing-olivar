@@ -1,0 +1,593 @@
+---
+
+---
+
+<section
+  class="py-16 md:py-20 lg:py-24"
+  aria-labelledby="contacto-title"
+  data-aos="fade-up"
+  data-aos-once="true"
+>
+  <div class="container mx-auto px-6 md:px-12">
+    <h2 id="contacto-title" class="sr-only">
+      Formulario de Contacto - Condominio Apolo
+    </h2>
+    <!-- Content Container -->
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <!-- Map Image -->
+        <aside
+          class="order-1 lg:order-1"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-once="true"
+        >
+          <figure>
+            <img
+              src="/images/como-llegar.webp"
+              alt="Mapa de ubicación del Condominio Apolo - Panamericana Sur Km 92, Asia"
+              class="w-full h-auto transition-transform duration-500 hover:scale-105"
+            />
+            <figcaption class="sr-only">
+              Mapa que muestra cómo llegar al Condominio Apolo
+            </figcaption>
+          </figure>
+        </aside>
+
+        <!-- Form -->
+        <main
+          class="order-2 lg:order-2"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          id="contacto"
+          data-aos-once="true"
+        >
+          <div
+            class="bg-white pt-5 lg:pt-16 pb-12 px-5 lg:px-12 rounded-3xl lg:rounded-[90px] shadow-2xl transition-all duration-500 hover:shadow-3xl"
+          >
+            <!-- Form Title -->
+            <header
+              class="text-center mb-8"
+              data-aos="fade-down"
+              data-aos-delay="300"
+              data-aos-once="true"
+            >
+              <h3 class="text-xl lg:text-3xl xl:text-4xl text-secondary mb-4">
+                Quiero que me contacten<br />
+                <strong> para mayor información</strong>
+              </h3>
+            </header>
+
+            <!-- Form -->
+            <form
+              id="contactForm"
+              class="space-y-6"
+              novalidate
+              aria-label="Formulario de contacto para el Condominio Apolo"
+            >
+              <!-- Name and Last Name Row -->
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-6"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-once="true"
+              >
+                <!-- First Name -->
+                <div
+                  class="relative"
+                  data-aos="fade-right"
+                  data-aos-delay="450"
+                  data-aos-once="true"
+                >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="w-full px-3 py-3 md:px-4 md:py-4 bg-secondary text-white rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent peer placeholder-transparent"
+                    placeholder="Nombre"
+                  />
+                  <label
+                    for="firstName"
+                    class="absolute left-3 top-3 md:left-4 md:top-4 text-white/70 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/70 md:peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-xs peer-focus:text-white"
+                  >
+                    Nombre
+                  </label>
+                  <div
+                    id="firstNameError"
+                    class="text-red-500 text-sm mt-1 hidden"
+                  >
+                  </div>
+                </div>
+
+                <!-- Last Name -->
+                <div
+                  class="relative"
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  data-aos-once="true"
+                >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    class="w-full px-3 py-3 md:px-4 md:py-4 bg-secondary text-white rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent peer placeholder-transparent"
+                    placeholder="Apellido"
+                  />
+                  <label
+                    for="lastName"
+                    class="absolute left-3 top-3 md:left-4 md:top-4 text-white/70 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/70 md:peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-xs peer-focus:text-white"
+                  >
+                    Apellido
+                  </label>
+                  <div
+                    id="lastNameError"
+                    class="text-red-500 text-sm mt-1 hidden"
+                  >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email and Phone Row -->
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-6"
+                data-aos="fade-up"
+                data-aos-delay="550"
+                data-aos-once="true"
+              >
+                <!-- Email -->
+                <div
+                  class="relative"
+                  data-aos="fade-right"
+                  data-aos-delay="600"
+                  data-aos-once="true"
+                >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-3 py-3 md:px-4 md:py-4 bg-secondary text-white rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent peer placeholder-transparent"
+                    placeholder="Email"
+                  />
+                  <label
+                    for="email"
+                    class="absolute left-3 top-3 md:left-4 md:top-4 text-white/70 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/70 md:peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-xs peer-focus:text-white"
+                  >
+                    Email
+                  </label>
+                  <div id="emailError" class="text-red-500 text-sm mt-1 hidden">
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div
+                  class="relative"
+                  data-aos="fade-left"
+                  data-aos-delay="650"
+                  data-aos-once="true"
+                >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-3 py-3 md:px-4 md:py-4 bg-secondary text-white rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent peer placeholder-transparent"
+                    placeholder="Teléfono"
+                  />
+                  <label
+                    for="phone"
+                    class="absolute left-3 top-3 md:left-4 md:top-4 text-white/70 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/70 md:peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-xs peer-focus:text-white"
+                  >
+                    Teléfono
+                  </label>
+                  <div id="phoneError" class="text-red-500 text-sm mt-1 hidden">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message (Optional) -->
+              <div
+                class="relative"
+                data-aos="fade-up"
+                data-aos-delay="700"
+                data-aos-once="true"
+              >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-3 py-3 md:px-4 md:py-4 bg-secondary text-white rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent peer placeholder-transparent resize-none"
+                  placeholder="Mensaje (opcional)"></textarea>
+                <label
+                  for="message"
+                  class="absolute left-3 top-3 md:left-4 md:top-4 text-white/70 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/70 md:peer-placeholder-shown:top-4 peer-focus:top-1 peer-focus:text-xs peer-focus:text-white"
+                >
+                  Mensaje (opcional)
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <section
+                class="text-center pt-2 lg:pt-6"
+                data-aos="zoom-in"
+                data-aos-delay="750"
+                data-aos-once="true"
+              >
+                <button
+                  type="submit"
+                  class="bg-gradient-to-t from-[#e98f0d] to-primary text-white font-bold py-2 lg:py-4 px-3 lg:px-8 rounded-full text-base lg:text-xl xl:text-2xl transition-colors duration-200 disabled:opacity-50"
+                  id="submitBtn"
+                >
+                  SOLICITAR INFORMACIÓN
+                </button>
+              </section>
+
+              <!-- Success/Error Messages -->
+              <output id="formMessage" class="text-center mt-4 hidden">
+                <p id="messageText" class="text-lg font-semibold"></p>
+              </output>
+
+              <footer
+                class="text-secondary text-center text-sm lg:text-lg xl:text-3xl"
+                data-aos="fade-up"
+                data-aos-delay="800"
+                data-aos-once="true"
+              >
+                <p>
+                  Déjanos tus datos y un asesor se<br />
+                  <strong>contactará contigo lo antes posible</strong>
+                </p>
+              </footer>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Modal -->
+<div id="successModal" class="fixed inset-0 z-50 hidden">
+  <!-- Backdrop -->
+  <div class="fixed inset-0 bg-white/30 backdrop-blur-sm transition-all"></div>
+
+  <!-- Modal Container -->
+  <div
+    id="modalContainer"
+    class="fixed inset-0 flex items-center justify-center p-4"
+  >
+    <!-- Modal Content -->
+    <div
+      class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 relative transform transition-all"
+    >
+      <!-- Close Button -->
+      <button
+        id="closeModal"
+        class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
+        aria-label="Cerrar modal"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Success Icon -->
+      <div class="text-center mb-6">
+        <div
+          class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4"
+        >
+          <svg
+            class="w-8 h-8 text-green-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+
+        <!-- Success Message -->
+        <h3 class="text-xl font-bold text-secondary mb-2">
+          ¡Enviado correctamente!
+        </h3>
+        <p class="text-gray-600">
+          Gracias por tu interés. Nos contactaremos contigo lo antes posible.
+        </p>
+      </div>
+
+      <!-- Action Button -->
+      <div class="text-center">
+        <button
+          id="modalCloseBtn"
+          class="bg-gradient-to-t from-[#e98f0d] to-primary text-white font-bold py-3 px-8 rounded-full transition-colors duration-200 hover:opacity-90"
+        >
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import type { LeadData } from "../utils/api";
+  import { submitLead } from "../utils/api";
+
+  const form = document.getElementById("contactForm") as HTMLFormElement;
+  const submitBtn = document.getElementById("submitBtn") as HTMLButtonElement;
+  const formMessage = document.getElementById("formMessage") as HTMLDivElement;
+  const messageText = document.getElementById(
+    "messageText"
+  ) as HTMLParagraphElement;
+
+  // Modal elements
+  const successModal = document.getElementById(
+    "successModal"
+  ) as HTMLDivElement;
+  const modalContainer = document.getElementById(
+    "modalContainer"
+  ) as HTMLDivElement;
+  const closeModal = document.getElementById("closeModal") as HTMLButtonElement;
+  const modalCloseBtn = document.getElementById(
+    "modalCloseBtn"
+  ) as HTMLButtonElement;
+
+  // Error message elements
+  const firstNameError = document.getElementById(
+    "firstNameError"
+  ) as HTMLDivElement;
+  const lastNameError = document.getElementById(
+    "lastNameError"
+  ) as HTMLDivElement;
+  const emailError = document.getElementById("emailError") as HTMLDivElement;
+  const phoneError = document.getElementById("phoneError") as HTMLDivElement;
+
+  // Modal functions
+  function showModal() {
+    successModal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
+
+  function hideModal() {
+    successModal.classList.add("hidden");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
+
+  function clearForm() {
+    form.reset();
+    clearErrors();
+
+    // Reset labels to initial state
+    inputs.forEach((input) => {
+      const target = input as HTMLInputElement;
+      const label = document.querySelector(
+        `label[for="${target.id}"]`
+      ) as HTMLLabelElement;
+      if (label) {
+        label.classList.remove("top-1", "text-xs", "text-white");
+        label.classList.add("top-3", "md:top-4", "text-base", "text-white/70");
+      }
+    });
+  }
+
+  // Clear all error messages
+  function clearErrors() {
+    firstNameError.classList.add("hidden");
+    lastNameError.classList.add("hidden");
+    emailError.classList.add("hidden");
+    phoneError.classList.add("hidden");
+  }
+
+  // Show error message for specific field
+  function showFieldError(fieldId: string, message: string) {
+    const errorElement = document.getElementById(
+      `${fieldId}Error`
+    ) as HTMLDivElement;
+    errorElement.textContent = message;
+    errorElement.classList.remove("hidden");
+  }
+
+  // Validate individual field
+  function validateField(fieldId: string, value: string): boolean {
+    let isValid = true;
+
+    switch (fieldId) {
+      case "firstName":
+        if (!value.trim()) {
+          showFieldError("firstName", "El nombre es requerido");
+          isValid = false;
+        }
+        break;
+      case "lastName":
+        if (!value.trim()) {
+          showFieldError("lastName", "El apellido es requerido");
+          isValid = false;
+        }
+        break;
+      case "email":
+        if (!value.trim()) {
+          showFieldError("email", "El email es requerido");
+          isValid = false;
+        } else {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            showFieldError("email", "Por favor ingresa un email válido");
+            isValid = false;
+          }
+        }
+        break;
+      case "phone":
+        if (!value.trim()) {
+          showFieldError("phone", "El teléfono es requerido");
+          isValid = false;
+        }
+        break;
+    }
+
+    return isValid;
+  }
+
+  // Input animation and validation handlers
+  const inputs = document.querySelectorAll("input, textarea");
+  inputs.forEach((input) => {
+    const target = input as HTMLInputElement;
+
+    // Real-time validation on blur
+    target.addEventListener("blur", (e) => {
+      const field = e.target as HTMLInputElement;
+      const label = document.querySelector(
+        `label[for="${field.id}"]`
+      ) as HTMLLabelElement;
+
+      // Handle label animation
+      if (field.value) {
+        label.classList.add("top-1", "text-xs", "text-white");
+        label.classList.remove(
+          "top-3",
+          "md:top-4",
+          "text-base",
+          "text-white/70"
+        );
+      } else {
+        label.classList.remove("top-1", "text-xs", "text-white");
+        label.classList.add("top-3", "md:top-4", "text-base", "text-white/70");
+      }
+
+      // Validate field if it's required
+      if (field.hasAttribute("required")) {
+        const errorElement = document.getElementById(`${field.id}Error`);
+        if (errorElement) {
+          errorElement.classList.add("hidden"); // Clear previous error
+          validateField(field.id, field.value);
+        }
+      }
+    });
+
+    // Clear errors on input
+    target.addEventListener("input", (e) => {
+      const field = e.target as HTMLInputElement;
+      const errorElement = document.getElementById(`${field.id}Error`);
+      if (errorElement && !errorElement.classList.contains("hidden")) {
+        errorElement.classList.add("hidden");
+      }
+    });
+
+    // Check initial state
+    if (target.value) {
+      const label = document.querySelector(
+        `label[for="${target.id}"]`
+      ) as HTMLLabelElement;
+      label.classList.add("top-1", "text-xs", "text-white");
+      label.classList.remove("top-3", "md:top-4", "text-base", "text-white/70");
+    }
+  });
+
+  // Form submission handler
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Clear previous errors
+    clearErrors();
+
+    // Disable submit button
+    submitBtn.disabled = true;
+    submitBtn.textContent = "ENVIANDO...";
+
+    // Hide previous messages
+    formMessage.classList.add("hidden");
+
+    // Get form data
+    const formData = new FormData(form);
+    const leadData: LeadData = {
+      firstName: formData.get("firstName") as string,
+      lastName: formData.get("lastName") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: (formData.get("message") as string) || "",
+      project: "APOLO",
+    };
+
+    // Validate all fields
+    let isFormValid = true;
+
+    if (!validateField("firstName", leadData.firstName)) isFormValid = false;
+    if (!validateField("lastName", leadData.lastName)) isFormValid = false;
+    if (!validateField("email", leadData.email)) isFormValid = false;
+    if (!validateField("phone", leadData.phone)) isFormValid = false;
+
+    if (!isFormValid) {
+      resetSubmitButton();
+      return;
+    }
+
+    try {
+      const result = await submitLead(leadData);
+
+      if (result.success) {
+        showModal();
+      } else {
+        showMessage(result.message || "Error al enviar el formulario", "error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      showMessage(
+        "Error al enviar el formulario. Inténtalo de nuevo.",
+        "error"
+      );
+    }
+
+    resetSubmitButton();
+  });
+
+  function showMessage(message: string, type: "success" | "error") {
+    messageText.textContent = message;
+    messageText.className = `text-lg font-semibold ${type === "success" ? "text-green-400" : "text-red-400"}`;
+    formMessage.classList.remove("hidden");
+  }
+
+  function resetSubmitButton() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "SOLICITAR INFORMACIÓN";
+  }
+
+  // Modal close event listeners
+  closeModal.addEventListener("click", () => {
+    hideModal();
+    clearForm();
+  });
+
+  modalCloseBtn.addEventListener("click", () => {
+    hideModal();
+    clearForm();
+  });
+
+  // Close modal when clicking outside of it (both on backdrop and container)
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target === modalContainer) {
+      hideModal();
+      clearForm();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !successModal.classList.contains("hidden")) {
+      hideModal();
+      clearForm();
+    }
+  });
+</script>

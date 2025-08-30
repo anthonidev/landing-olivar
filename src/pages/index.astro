@@ -1,16 +1,75 @@
 ---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 
+import AvancesObras from "./AvancesObras.astro";
+import AtributosCondominio from "./AtributosCondominio.astro";
+import HeroSection from "./HeroSection.astro";
+import ContactForm from "./ContactForm.astro";
+import Footer from "./Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Preload Critical Resources -->
+    <link
+      rel="preload"
+      href="/images/hero-banner.webp"
+      as="image"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      href="/icons/logo.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <Navbar />
+    </header>
+
+    <main>
+      <section
+        id="inicio"
+        class="bg-cover bg-center bg-no-repeat flex flex-col"
+        style="background-image: url('/images/fondo.webp');"
+        aria-label="Sección principal con información de precios y ubicación"
+      >
+        <div class="relative z-10 flex flex-col h-full">
+          <HeroSection />
+        </div>
+        <div id="avances">
+          <AvancesObras />
+        </div>
+
+        <div id="atributos">
+          <AtributosCondominio />
+        </div>
+
+        <div>
+          <ContactForm />
+        </div>
+      </section>
+
+      <Footer />
+      <script>
+        import AOS from "aos";
+        AOS.init();
+      </script>
+    </main>
+  </body>
 </html>

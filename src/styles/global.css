@@ -1,0 +1,163 @@
+@import "tailwindcss";
+/* aos */
+@import "aos/dist/aos.css";
+@theme {
+  --color-primary: #f4b319;
+  --color-secondary: #0e6e21;
+  --color-tertiary: #00b5d3;
+  --font-family-sans: "Montserrat", system-ui, sans-serif;
+}
+
+.global-background {
+  background-image: url("/images/fondo-global.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Utility: thick white text outline for sticker-style labels */
+.text-outline-white {
+  /* Primary: stroke where supported */
+  -webkit-text-stroke: 8px #fff;
+  paint-order: stroke fill;
+  /* Fallback halo using layered shadows for browsers without text-stroke */
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 1px 0 0 #fff, -1px 0 0 #fff,
+    0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px 0 #fff, -1px -1px 0 #fff,
+    -1px 1px 0 #fff, 1px -1px 0 #fff, 2px 2px 0 #fff, -2px -2px 0 #fff,
+    -2px 2px 0 #fff, 2px -2px 0 #fff;
+}
+
+/* Enhanced animations and micro-interactions */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+/* Custom keyframes */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Gradient animation */
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Smooth scrolling for entire document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal overflow for AOS animations */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Override AOS fade-right and fade-left animations to prevent horizontal scroll */
+[data-aos="fade-right"] {
+  transform: translate3d(-30px, 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(30px, 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}

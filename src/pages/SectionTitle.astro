@@ -1,0 +1,57 @@
+---
+export interface Props {
+  topText: string;
+  bottomText: string;
+}
+
+const { topText, bottomText } = Astro.props;
+---
+
+<div
+  class="flex items-center justify-center my-12 md:my-16"
+  role="banner"
+  data-aos="fade-down"
+  data-aos-delay="100"
+  data-aos-once="true"
+>
+  <img
+    src="/icons/gotas.svg"
+    alt=""
+    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 animate-float transition-transform duration-300 hover:scale-125"
+    role="presentation"
+    aria-hidden="true"
+    data-aos="fade-right"
+    data-aos-delay="200"
+    data-aos-once="true"
+  />
+
+  <hgroup
+    class="text-center flex space-x-2"
+    data-aos="zoom-in"
+    data-aos-delay="300"
+    data-aos-once="true"
+  >
+    <p
+      class="text-white text-3xl md:text-4xl lg:text-5xl font-semibold transition-all duration-500 hover:scale-105"
+    >
+      {topText}
+    </p>
+    <h2
+      class="text-primary text-3xl md:text-4xl lg:text-5xl font-black transition-all duration-500 hover:scale-105"
+    >
+      {bottomText}
+    </h2>
+  </hgroup>
+
+  <img
+    src="/icons/gotas.svg"
+    alt=""
+    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 scale-x-[-1] animate-float transition-transform duration-300 hover:scale-125"
+    role="presentation"
+    aria-hidden="true"
+    style="animation-delay: 1.5s;"
+    data-aos="fade-left"
+    data-aos-delay="200"
+    data-aos-once="true"
+  />
+</div>
