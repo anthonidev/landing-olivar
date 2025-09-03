@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+import StructuredData from "../components/StructuredData.astro";
 import Navbar from "../components/Navbar.astro";
 
 import AvancesObras from "./AvancesObras.astro";
@@ -15,12 +17,53 @@ import Footer from "./Footer.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- SEO Meta Tags -->
+    <SEO
+      title="Condominio El Olivar - Lotes en Cañete Km 163 | Huertas Inmobiliaria"
+      description="🏡 Tu propio hogar, tu casa de campo en Cañete. Lotes desde S/23,999 al contado. Inicial desde S/2,999. Panamericana Sur Km 163. ✨ Gimnasio al aire libre, juegos infantiles, ciclovías, zona de parrillas. Proyecto de Huertas Inmobiliaria en zona campestre al sur de Lima."
+      canonical="https://condominio-el-olivar.inmobiliariahuertas.com"
+      openGraph={{
+        basic: {
+          title:
+            "Condominio El Olivar - Lotes en Cañete Km 163 | Huertas Inmobiliaria",
+          type: "website",
+          image:
+            "https://condominio-el-olivar.inmobiliariahuertas.com/images/fondos/hero.webp",
+          url: "https://condominio-el-olivar.inmobiliariahuertas.com",
+        },
+        optional: {
+          description:
+            "Tu propio hogar, tu casa de campo en Cañete. Lotes desde S/23,999 al contado. En Panamericana Sur Km 163. Proyecto de Huertas Inmobiliaria.",
+          siteName: "Condominio El Olivar - Huertas Inmobiliaria",
+          locale: "es_ES",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@HuertasInmobiliaria",
+        title: "Condominio El Olivar - Lotes en Cañete Km 163",
+        description:
+          "🏡 Tu casa de campo en Cañete. Lotes desde S/23,999 al contado. Inicial desde S/2,999.",
+        image:
+          "https://condominio-el-olivar.inmobiliariahuertas.com/images/fondos/hero.webp",
+      }}
+    />
+
+    <!-- Structured Data -->
+    <StructuredData />
+
+    <!-- Additional Keywords -->
+    <meta
+      name="keywords"
+      content="condominio cañete, lotes cañete, casa campo cañete, inmobiliaria huertas, condominio el olivar, lotes panamericana sur, terrenos cañete lima, inmobiliaria peru, lotes campo cañete, condominio cerrado cañete, proyecto inmobiliario lima sur, lotes financiados cañete, terrenos cañete km 163, huertas inmobiliaria peru, casas campo lima, lotes exclusivos cañete, condominio campestre cañete, terrenos rurales lima"
+    />
+
     <!-- Preload Critical Resources -->
     <link
       rel="preload"
-      href="/images/hero-banner.webp"
+      href="/images/fondos/hero.webp"
       as="image"
-      type="image/png"
+      type="image/webp"
     />
     <link
       rel="preload"
@@ -36,6 +79,10 @@ import Footer from "./Footer.astro";
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f4b319" />
+    <meta name="msapplication-TileColor" content="#f4b319" />
   </head>
   <body>
     <header>
@@ -46,7 +93,7 @@ import Footer from "./Footer.astro";
       <section
         id="inicio"
         class="bg-cover bg-center bg-no-repeat flex flex-col"
-        style="background-image: url('/images/fondo.webp');"
+        style="background-image: url('/images/fondos/hero.webp');"
         aria-label="Sección principal con información de precios y ubicación"
       >
         <div class="relative z-10 flex flex-col h-full">
@@ -55,17 +102,28 @@ import Footer from "./Footer.astro";
         <div id="avances">
           <AvancesObras />
         </div>
+      </section>
 
+      <section
+        id="inicio"
+        class="bg-cover bg-center bg-no-repeat flex flex-col bg-secondary/90"
+        style="background-image: url('/images/fondos/fondo2.webp')"
+        aria-label="Sección principal con información de precios y ubicación"
+      >
         <div id="atributos">
           <AtributosCondominio />
         </div>
-
-        <div>
-          <ContactForm />
-        </div>
+      </section>
+      <section
+        id="inicio"
+        class="bg-cover bg-center bg-no-repeat flex flex-col"
+        style="background-image: url('/images/fondos/fondo3.webp');"
+        aria-label="Sección principal con información de precios y ubicación"
+      >
+        <ContactForm />
+        <Footer />
       </section>
 
-      <Footer />
       <script>
         import AOS from "aos";
         AOS.init();

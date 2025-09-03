@@ -1,0 +1,203 @@
+---
+// Structured Data for Real Estate Project - Condominio El Olivar
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#organization",
+      name: "Huertas Inmobiliaria",
+      alternateName: "Huertas Inmobiliaria Perú",
+      url: "https://condominio-el-olivar.inmobiliariahuertas.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://condominio-el-olivar.inmobiliariahuertas.com/icons/logo.svg",
+        width: "200",
+        height: "80",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+51-1-234-5678",
+        contactType: "sales",
+        areaServed: "PE",
+        availableLanguage: "Spanish",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Panamericana Sur Km 163",
+        addressLocality: "Cañete",
+        addressRegion: "Lima",
+        postalCode: "15701",
+        addressCountry: "PE",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -13.074240,
+        longitude: -76.384460,
+      },
+      sameAs: [
+        "https://www.facebook.com/HuertasInmobiliaria",
+        "https://www.instagram.com/huertas_inmobiliaria",
+      ],
+    },
+    {
+      "@type": "ResidentialComplex",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#project",
+      name: "Condominio El Olivar",
+      alternateName: "Proyecto El Olivar Cañete",
+      description:
+        "Tu propio hogar, tu casa de campo. Lotes desde S/23,999 al contado. Inicial desde S/2,999. En Cañete, Panamericana Sur Km 163. Proyecto inmobiliario de Huertas Inmobiliaria en zona campestre al sur de Lima.",
+      url: "https://condominio-el-olivar.inmobiliariahuertas.com",
+      image: [
+        "https://condominio-el-olivar.inmobiliariahuertas.com/images/fondos/hero.webp",
+        "https://condominio-el-olivar.inmobiliariahuertas.com/images/atributos/recurso1.webp",
+        "https://condominio-el-olivar.inmobiliariahuertas.com/images/atributos/recurso2.webp",
+        "https://condominio-el-olivar.inmobiliariahuertas.com/images/avances/recurso1.webp",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Panamericana Sur Km 163",
+        addressLocality: "Cañete",
+        addressRegion: "Lima",
+        postalCode: "15701",
+        addressCountry: "PE",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -13.074240,
+        longitude: -76.384460,
+      },
+      developer: {
+        "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#organization",
+      },
+      amenityFeature: [
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Gimnasio al aire libre",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Juegos Infantiles",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Ciclovías",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Zona de parrillas",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Parques y jardines",
+          value: true,
+        },
+      ],
+      numberOfRooms: "Variable",
+      floorSize: {
+        "@type": "QuantitativeValue",
+        minValue: 120,
+        unitCode: "MTK",
+      },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Precio inicial",
+          price: "2999",
+          priceCurrency: "PEN",
+          description: "Inicial desde S/2,999",
+        },
+        {
+          "@type": "Offer",
+          name: "Precio al contado",
+          price: "23999",
+          priceCurrency: "PEN",
+          description: "Al contado desde S/23,999",
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#website",
+      url: "https://condominio-el-olivar.inmobiliariahuertas.com",
+      name: "Condominio El Olivar - Lotes en Cañete",
+      description:
+        "Condominio El Olivar en Cañete - Tu casa de campo. Lotes desde S/23,999 al contado. En Panamericana Sur Km 163.",
+      publisher: {
+        "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#organization",
+      },
+      potentialAction: [
+        {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate:
+              "https://condominio-el-olivar.inmobiliariahuertas.com/?s={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      ],
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#webpage",
+      url: "https://condominio-el-olivar.inmobiliariahuertas.com",
+      name: "Condominio El Olivar - Tu propio hogar, tu casa de campo",
+      isPartOf: {
+        "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#website",
+      },
+      about: {
+        "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#project",
+      },
+      description:
+        "Tu propio hogar, tu casa de campo. Lotes desde S/23,999 al contado. Inicial desde S/2,999. En Cañete, Panamericana Sur Km 163.",
+      breadcrumb: {
+        "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#breadcrumb",
+      },
+      inLanguage: "es-ES",
+      potentialAction: [
+        {
+          "@type": "ReadAction",
+          target: ["https://condominio-el-olivar.inmobiliariahuertas.com"],
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Inicio",
+          item: "https://condominio-el-olivar.inmobiliariahuertas.com",
+        },
+      ],
+    },
+    {
+      "@type": "Place",
+      "@id": "https://condominio-el-olivar.inmobiliariahuertas.com/#place",
+      name: "Cañete, Lima, Perú",
+      description:
+        "Zona campestre en Cañete, Lima, ideal para vivienda familiar y descanso",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -13.074240,
+        longitude: -76.384460,
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Cañete",
+        addressRegion: "Lima",
+        addressCountry: "PE",
+      },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://condominio-el-olivar.inmobiliariahuertas.com/sitemap-index.xml
+Sitemap: https://condominio-el-olivar.inmobiliariahuertas.com/sitemap-0.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Allow images and CSS/JS
+Allow: /images/
+Allow: /icons/
+Allow: *.css
+Allow: *.js
+
+# Block specific bots if needed
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

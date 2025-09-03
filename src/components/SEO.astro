@@ -1,0 +1,153 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  openGraph?: {
+    basic: {
+      title: string;
+      type: string;
+      image: string;
+      url?: string;
+    };
+    optional?: {
+      description?: string;
+      siteName?: string;
+      locale?: string;
+    };
+  };
+  twitter?: {
+    card?: string;
+    site?: string;
+    creator?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+}
+
+const {
+  title,
+  description,
+  canonical,
+  noindex = false,
+  nofollow = false,
+  openGraph,
+  twitter,
+} = Astro.props;
+
+const defaultOpenGraph = {
+  basic: {
+    title: title,
+    type: "website",
+    image: "/images/fondos/hero.webp",
+    url: canonical || Astro.url.href,
+  },
+  optional: {
+    description: description,
+    siteName: "Condominio El Olivar - Huertas Inmobiliaria",
+    locale: "es_ES",
+  },
+};
+
+const defaultTwitter = {
+  card: "summary_large_image",
+  site: "@HuertasInmobiliaria",
+  title: title,
+  description: description,
+  image: "/images/fondos/hero.webp",
+};
+
+const og = { ...defaultOpenGraph, ...openGraph };
+const twitterCard = { ...defaultTwitter, ...twitter };
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical || Astro.url.href} />
+
+<!-- Robots -->
+{noindex && <meta name="robots" content="noindex" />}
+{nofollow && <meta name="robots" content="nofollow" />}
+{
+  (noindex || nofollow) && (
+    <meta
+      name="robots"
+      content={`${noindex ? "noindex" : ""}${noindex && nofollow ? "," : ""}${nofollow ? "nofollow" : ""}`}
+    />
+  )
+}
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={og.basic.type} />
+<meta property="og:url" content={og.basic.url} />
+<meta property="og:title" content={og.basic.title} />
+<meta property="og:description" content={og.optional?.description} />
+<meta property="og:image" content={og.basic.image} />
+<meta property="og:site_name" content={og.optional?.siteName} />
+<meta property="og:locale" content={og.optional?.locale} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content={twitterCard.card} />
+<meta property="twitter:url" content={canonical || Astro.url.href} />
+<meta property="twitter:title" content={twitterCard.title} />
+<meta property="twitter:description" content={twitterCard.description} />
+<meta property="twitter:image" content={twitterCard.image} />
+{
+  twitterCard.site && (
+    <meta property="twitter:site" content={twitterCard.site} />
+  )
+}
+{
+  twitterCard.creator && (
+    <meta property="twitter:creator" content={twitterCard.creator} />
+  )
+}
+
+<!-- Additional SEO Tags -->
+<meta name="author" content="Huertas Inmobiliaria" />
+<meta name="publisher" content="Huertas Inmobiliaria" />
+<meta
+  name="copyright"
+  content="© 2025 Huertas Inmobiliaria. Todos los derechos reservados."
+/>
+<meta name="language" content="es" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+
+<!-- Geo Meta Tags -->
+<meta name="geo.region" content="PE-LIM" />
+<meta name="geo.placename" content="Cañete, Lima, Perú" />
+<meta name="geo.position" content="-13.074240;-76.384460" />
+<meta name="ICBM" content="-13.074240, -76.384460" />
+
+<!-- Business Info -->
+<meta name="contact" content="info@inmobiliariahuertas.com" />
+<meta name="distribution" content="global" />
+<meta name="target" content="buyers, investors, real estate" />
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content={title} />
+<meta itemprop="description" content={description} />
+<meta itemprop="image" content="/images/fondos/hero.webp" />
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json" />
+
+<!-- Additional Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Condominio El Olivar" />
+
+<!-- Performance Hints -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />

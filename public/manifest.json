@@ -1,0 +1,30 @@
+{
+  "name": "Condominio El Olivar - Huertas Inmobiliaria",
+  "short_name": "Condominio El Olivar",
+  "description": "Tu propio hogar, tu casa de campo. Lotes desde S/23,999 al contado. En Cañete, Panamericana Sur Km 163.",
+  "start_url": "https://condominio-el-olivar.inmobiliariahuertas.com/",
+  "id": "https://condominio-el-olivar.inmobiliariahuertas.com/",
+  "scope": "https://condominio-el-olivar.inmobiliariahuertas.com/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f4b319",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "real-estate",
+    "business",
+    "property"
+  ],
+  "orientation": "portrait-primary"
+}

@@ -8,22 +8,27 @@ const { topText, bottomText } = Astro.props;
 ---
 
 <div
-  class="flex items-center justify-center my-12 md:my-16"
+  class="flex flex-col items-center justify-center my-12 md:my-14"
   role="banner"
   data-aos="fade-down"
   data-aos-delay="100"
   data-aos-once="true"
 >
-  <img
-    src="/icons/gotas.svg"
-    alt=""
-    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 animate-float transition-transform duration-300 hover:scale-125"
-    role="presentation"
-    aria-hidden="true"
-    data-aos="fade-right"
-    data-aos-delay="200"
-    data-aos-once="true"
-  />
+  <div class="flex items-center space-x-5">
+    <!-- quiero agregar dos lineas ----- logo ----- asi  -->
+    <div class="w-20 h-0.5 bg-white opacity-50 transform lg:w-24"></div>
+    <img
+      src="/icons/isotipo.svg"
+      alt="logo del Condominio El Olivar"
+      class="w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 animate-float transition-transform duration-300 hover:scale-125"
+      role="presentation"
+      aria-hidden="true"
+      data-aos="fade-right"
+      data-aos-delay="200"
+      data-aos-once="true"
+    />
+    <div class="w-20 h-0.5 bg-white opacity-50 transform lg:w-24"></div>
+  </div>
 
   <hgroup
     class="text-center flex space-x-2"
@@ -32,7 +37,7 @@ const { topText, bottomText } = Astro.props;
     data-aos-once="true"
   >
     <p
-      class="text-white text-3xl md:text-4xl lg:text-5xl font-semibold transition-all duration-500 hover:scale-105"
+      class="text-white text-3xl md:text-4xl lg:text-5xl transition-all duration-500 hover:scale-105"
     >
       {topText}
     </p>
@@ -42,16 +47,4 @@ const { topText, bottomText } = Astro.props;
       {bottomText}
     </h2>
   </hgroup>
-
-  <img
-    src="/icons/gotas.svg"
-    alt=""
-    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 scale-x-[-1] animate-float transition-transform duration-300 hover:scale-125"
-    role="presentation"
-    aria-hidden="true"
-    style="animation-delay: 1.5s;"
-    data-aos="fade-left"
-    data-aos-delay="200"
-    data-aos-once="true"
-  />
 </div>

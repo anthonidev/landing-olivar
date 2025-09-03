@@ -8,13 +8,6 @@
   --font-family-sans: "Montserrat", system-ui, sans-serif;
 }
 
-.global-background {
-  background-image: url("/images/fondo-global.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* Utility: thick white text outline for sticker-style labels */
 .text-outline-white {
   /* Primary: stroke where supported */

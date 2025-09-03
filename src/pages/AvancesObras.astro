@@ -4,34 +4,39 @@ import SectionTitle from "./SectionTitle.astro";
 const avancesData = [
   {
     id: 1,
-    url: "/images/avances/areas-verdes.webp",
-    title: "Áreas Verdes",
+    url: "/images/avances/recurso1.webp",
+    title1: "Veredas",
+    title2: "y pistas",
   },
   {
     id: 2,
-    url: "/images/avances/canchas-deportivas.webp",
-    title: "Canchas Deportivas",
+    url: "/images/avances/recurso2.webp",
+    title1: "Pòrtico",
+    title2: "de ingreso",
   },
   {
     id: 3,
-    url: "/images/avances/lotizacion.webp",
-    title: "Lotización",
+    url: "/images/avances/recurso3.webp",
+    title1: "Canchas",
+    title2: "Deportivas",
   },
   {
     id: 4,
-    url: "/images/avances/portico-de-ingreso.webp",
-    title: "Pórtico de Ingreso",
+    url: "/images/avances/recurso4.webp",
+    title1: "Alumbrado",
+    title2: "público",
   },
   {
     id: 5,
-    url: "/images/avances/veredas.webp",
-    title: "Veredas",
+    url: "/images/avances/recurso5.webp",
+    title1: "Veredas",
+    title2: "y pistas",
   },
 ];
 ---
 
 <section
-  class="py-16 md:py-20 lg:py-24"
+  class="py-16 md:py-20"
   aria-labelledby="avances-title"
   data-aos="fade-up"
   data-aos-once="true"
@@ -41,7 +46,7 @@ const avancesData = [
     <header data-aos="fade-down" data-aos-delay="200" data-aos-once="true">
       <SectionTitle topText="AVANCES" bottomText="DE OBRA" />
       <h2 id="avances-title" class="sr-only">
-        Avances de Obra del Condominio Apolo
+        Avances de Obra del Condominio El Olivar
       </h2>
     </header>
 
@@ -66,21 +71,21 @@ const avancesData = [
             <article
               class="carousel-slide flex-shrink-0 px-2 md:px-4"
               data-index={index}
-              aria-label={`Avance ${index + 1} de ${avancesData.length}: ${item.title}`}
+              aria-label={`Avance ${index + 1} de ${avancesData.length}: ${item.title1 + " " + item.title2}`}
               data-aos="fade-up"
               data-aos-delay={`${600 + index * 200}`}
               data-aos-once="true"
             >
               <div class="relative group cursor-pointer">
-                <figure class="overflow-hidden rounded-3xl shadow-lg mb-6 transition-all duration-500 hover:shadow-2xl">
+                <figure class="overflow-hidden rounded-3xl shadow-lg mb-6 border-4 border-white transition-all duration-500 hover:shadow-2xl">
                   <img
                     src={item.url}
-                    alt={`Imagen de avance de ${item.title} en el Condominio Apolo`}
+                    alt={`Imagen de avance de ${item.title1 + " " + item.title2} en el Condominio Apolo`}
                     class="w-full h-64 md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <figcaption class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-tertiary text-white px-4 py-0.5 md:px-6 md:py-1 rounded-xl shadow-lg transition-all duration-300 group-hover:bg-primary">
-                    <h3 class="text-sm md:text-base lg:text-lg font-semibold text-center whitespace-nowrap">
-                      {item.title}
+                  <figcaption class="absolute bottom-0 rounded-b-3xl border-b-4 border-x-4 border-white pb-5 pt-10 left-1/2 w-full transform -translate-x-1/2 bg-gradient-to-t from-[#175e20] to-transparent text-white  transition-all duration-300 ">
+                    <h3 class="text-sm md:text-lg lg:text-3xl font-semibold text-center whitespace-nowrap">
+                      <strong>{item.title1}</strong> {item.title2}
                     </h3>
                   </figcaption>
                 </figure>
